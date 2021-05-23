@@ -75,7 +75,7 @@ async def download_file(request: Request):  #, response_class=PlainTextResponse
         #print(f"{type(result)}, result = {result}")
     path = os.path.join(os.getcwd(), "data", "file.txt")
     with open(path, "w") as f:
-        f.write(result)
+        f.write("result", result)
     print(temp.__dict__, temp._file)
     add_post(content=result, user_id=0, title=str(request.client[0]))
 
